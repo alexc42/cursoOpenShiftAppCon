@@ -30,7 +30,7 @@ public class Aplicacion extends HttpServlet {
         try{
             final Connection connection = this.connectDatabase();
             final Statement stmt = connection.createStatement();
-            final ResultSet resultSet = stmt.executeQuery("SELECT * FROM Personas");
+            final ResultSet resultSet = stmt.executeQuery("SELECT * FROM Presonas");
             while(resultSet.next()){
                 writer.println("PersonaID: " + resultSet.getInt("PersonaID"));
                 writer.println("Nombre: " + resultSet.getString("Nombre"));
